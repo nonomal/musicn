@@ -1,26 +1,24 @@
 {
+  "parser": "@typescript-eslint/parser",
   "env": {
-    "browser": true,
+    "node": true,
     "es2021": true
   },
-  "extends": ["airbnb-base", "plugin:prettier/recommended"],
+  "extends": [
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
   "parserOptions": {
+    "project": "tsconfig.json",
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["prettier"],
+  "plugins": ["@typescript-eslint/eslint-plugin"],
   "rules": {
-    "prettier/prettier": "error",
-    "prefer-const": "error",
-    "camelcase": "off",
-    "no-underscore-dangle": "off",
-    "consistent-return": "off",
-    "class-methods-use-this": "off",
-    "no-shadow": "off",
-    "no-console": "off",
-    "no-await-in-loop": "off",
-    "import/extensions": "off",
-    "no-restricted-syntax": "off",
-    "no-param-reassign": "off"
+    "no-await-in-loop": "error",
+    "prefer-const": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   }
 }
